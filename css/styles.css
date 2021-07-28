@@ -15,7 +15,7 @@ body {
 }
 
 main {
-  width: 85%;
+  width: 90%;
   max-width: 850px;
   margin: 0 auto;
 }
@@ -30,15 +30,37 @@ img {
   display: inline-block;
 }
 
+.blur--top {
+  z-index: -1;
+  top: 0;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#2d99a4), color-stop(#ffffff6e), to(#2d98a400));
+  background-image: linear-gradient(to bottom, #2d99a4, #ffffff6e, #2d98a400);
+  width: 100%;
+  min-height: 20rem;
+}
+
+.blur--left {
+  z-index: -2;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffffffe3), color-stop(#ffffff52), to(#2d98a400));
+  background-image: linear-gradient(to right, #ffffffe3, #ffffff52, #2d98a400);
+  height: 100%;
+  width: 50%;
+}
+
 header {
   font-weight: 700;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
 
 header .logo-box {
   color: #026e78;
   float: left;
+  margin-right: 1rem;
 }
 
 header .name {
@@ -55,28 +77,58 @@ header .phone {
 }
 
 nav {
-  margin: 1rem;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .btn {
-  padding: 1rem;
+  padding: 0.8rem 2.5rem;
   border: none;
   font-weight: 400;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.1rem;
 }
 
 .btn--white {
   background-color: #fff;
+  color: #026e78;
 }
 
 .btn--blueLight {
   background-color: #2d99a4;
+  color: #fff;
 }
 
 .btn--blueDark {
   background-color: #026e78;
+  color: #fff;
+}
+
+section {
+  margin: 6rem 0;
 }
 
 section .btn {
-  font-weight: 300;
   display: block;
+  margin: 1rem 0;
+  padding: 0.4em 0.7em;
+}
+
+section .btn--blueDark {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+section .btn--white {
+  font-size: 1.5rem;
+}
+
+section .btn--blueLight {
+  font-size: 1.6rem;
 }
